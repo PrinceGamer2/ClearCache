@@ -15,9 +15,9 @@ echo Successfully completed the Process
 pause
 cls
 
-
-
 :choice
+echo WELCOME to CleanCache By Prince Gamer2.0
+echo(
 set /P c=WANT TO CLEAN CACHE AUTOMATICALLY [Y/N]?
 if /I "%c%" EQU "Y" goto :wannacontinue
 if /I "%c%" EQU "N" goto :wanttoexit
@@ -32,13 +32,14 @@ pause
 exit
 
 :wannacontinue
-
+cls
+echo REMEMBER NOT TO CLOSE THE WINDOW, WHICH WILL LEAD TO THE STOPPING OF THE PROCESS. THOUGH YOU CAN MINIMIZE THE WINDOW 
+echo(
 echo NOW CHOOSE THE TIME AFTER WHICH YOU WANT ME TO CLEAR CACHE 
 goto :choice0
-cls
-
 
 :choice0
+echo(
 SET /P UserInput=Please Enter Time (in mins): 
 IF %UserInput% EQU 0 GOTO E_INVALIDINPUT
 
@@ -67,5 +68,5 @@ ping 127.0.0.1 -n %UserInputVal%
 goto top1
  
 :plsenternum
-echo Kindly Enter a proper number below 
+echo Kindly Enter a number like 1,2,3,4,..... below 
 goto choice0
